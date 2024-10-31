@@ -1,0 +1,152 @@
+:root {
+    --pink: #FFB7B2;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100vh;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    /* background-color: red; */
+}
+
+header {
+    background-color: #c4c9d8;
+    padding: 30px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* background-image: url(../images/views/driving.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-blend-mode: screen; */
+}
+
+.date {
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
+    padding: 0 20px;
+}
+
+.date p {
+    margin: 0;
+}
+
+section {
+
+    padding: 100px 50px;
+}
+
+.wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+footer {
+    background-color: #c4c9d8;
+    padding: 30px 50px;
+}
+
+.purp-bkg {
+    background-color: #aeb6cb;
+}
+
+.grn-bkg {
+    background-color: #9ADBCF;
+}
+
+.pnk-bkg {
+    background-color: var(--pink);
+}
+
+h1 {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 32px;
+}
+
+a {
+    display: inline-block;
+    color: #3B3B3B;
+    text-decoration: none;
+    transition: 2s;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #000;
+
+}
+
+model-viewer {
+    width: 100%;
+    height: 600px;
+}
+
+.grid-parent {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    /* grid-template-rows: repeat(2, 1fr); */
+}
+
+.fridge-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    border-left: 1px solid #000;
+    border-top: 1px solid #000;
+}
+
+@media screen and (max-width: 1000px) {
+    .grid-parent {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .fridge-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.fridge-grid div {
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.large-item {
+    grid-column: 2 /span 2;
+    grid-row: span 2;
+}
+
+@media screen and (max-width: 540px) {
+    .grid-parent {
+        grid-template-columns: repeat(2, 1fr);
+
+        .fridge-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .large-item {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
