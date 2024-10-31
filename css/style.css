@@ -50,6 +50,10 @@ header {
     margin: 0;
 }
 
+.active {
+    text-decoration: underline;
+}
+
 section {
 
     padding: 100px 50px;
@@ -75,6 +79,23 @@ footer {
 
 .pnk-bkg {
     background-color: var(--pink);
+}
+
+.lightyellow-bkg {
+    background-color: #F9E4AD;
+}
+
+.yellow-bkg {
+    background-color: #F5F5DC;
+}
+
+body.full-page {
+    display: flex;
+    flex-direction: column;
+}
+
+.full-page section {
+    flex: 1;
 }
 
 h1 {
